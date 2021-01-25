@@ -1,6 +1,7 @@
 import os
 import sys
 import re
+import csv
 
 
 def run():
@@ -25,10 +26,16 @@ def run():
             for raw_module in raw_modules:
                 modules.append(Ksp_Module(raw_module))
 
-    for module in modules:
-        if 'module' in module.attributes and module.attributes['module'] == 'Part':
-            print('Part: {0}, TechRequired: {1}, Mod: {2}'.format(
-                module.attributes['name'], module.attributes['TechRequired'], modname))
+    with open('_output/{0}_parts.csv'.format(modname), "w", newline='') as documentoSalida:
+        parts_csv = csv.writer(
+            documentoSalida, delimiter=',', quotechar='"')
+
+        parts_csv.writerow(["name", "TechRequired"])
+
+        for module in modules:
+            if 'module' in module.attributes and module.attributes['module'] == 'Part':
+                parts_csv.writerow([
+                    module.attributes['name'].strip(), module.attributes['TechRequired'].strip()])
 
 
 class Ksp_Module:
