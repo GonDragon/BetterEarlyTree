@@ -35,10 +35,11 @@ landerCabinSmall,simpleCommandModules,squad,-
 evaJetpack,spaceExploration,squad,800
 miniIntake,stability,squad,-
 StandardCtrlSrf,stability,squad,-
-wingConnector2,stability,squad,-
+wingConnector5,stability,squad,-
 miniJetEngine,stability,squad,-
 miniFuselage,stability,squad,-
 GearFixed,stability,squad,-
+GearFree,stability,squad,-
 sensorThermometer,start,squad,0
 longAntenna,start,squad,0
 SurfAntenna,start,squad,0
@@ -50,3 +51,13 @@ evaChute,survivability,squad,300
 LaunchEscapeSystem,survivability,squad,2000
 structuralPanel1,engineering101,squad,900
 structuralPanel2,engineering101,squad,1800
+Mk1FuselageStructural,basicConstruction,squad,-
+largeAdapter2,generalConstruction,squad,-
+stackBiCoupler,generalConstruction,squad,-
+stackBiCoupler_v2,generalConstruction,squad,-
+stackQuadCoupler,generalConstruction,squad,-
+stackTriCoupler_v2,generalConstruction,squad,-
+stackTriCoupler,generalConstruction,squad,-
+solarPanels5,engineering101,squad,-
+solarPanels4,electrics,squad,-
+solarPanels3,electrics,squad,-
