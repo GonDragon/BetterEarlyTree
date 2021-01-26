@@ -29,9 +29,9 @@ RCSLinearSmall,flightControl,squad,-
 solidBooster_v2,generalRocketry,squad,-
 solidBooster,generalRocketry,squad,-
 seatExternalCmd,mannedVehicles ,squad,3200
-mk1pod,simpleCommandModules,squad,4200
-mk1pod_v2,simpleCommandModules,squad,2100
-landerCabinSmall,simpleCommandModules,squad,-
+mk1pod,survivability,squad,2100
+mk1pod_v2,survivability,squad,2100
+landerCabinSmall,simpleCommandModules,squad,4800
 evaJetpack,spaceExploration,squad,800
 miniIntake,stability,squad,-
 StandardCtrlSrf,stability,squad,-
@@ -61,3 +61,10 @@ stackTriCoupler,generalConstruction,squad,-
 solarPanels5,engineering101,squad,-
 solarPanels4,electrics,squad,-
 solarPanels3,electrics,squad,-
+kv3Pod,simpleCommandModules,SquadExpansion,-
+Mk2Pod,simpleCommandModules,SquadExpansion,-
+kv1Pod,mannedVehicles ,SquadExpansion,1800
+Panel0,engineering101,SquadExpansion,900
+Panel1,engineering101,SquadExpansion,1800
+kv2Pod,survivability,SquadExpansion,-
+monopropMiniSphere,flightControl,SquadExpansion,-
