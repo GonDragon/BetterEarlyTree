@@ -1,6 +1,10 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,windows,python,visualstudio
-# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,windows,python,visualstudio
+# Created by https://www.toptal.com/developers/gitignore/api/python,windows,visualstudio,visualstudiocode,libreoffice
+# Edit at https://www.toptal.com/developers/gitignore?templates=python,windows,visualstudio,visualstudiocode,libreoffice
+
+### LibreOffice ###
+# LibreOffice locks
+.~lock.*#
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
@@ -532,7 +536,7 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 
-# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,windows,python,visualstudio
+# End of https://www.toptal.com/developers/gitignore/api/python,windows,visualstudio,visualstudiocode,libreoffice
 
 # Custom Definitions
 _output/
