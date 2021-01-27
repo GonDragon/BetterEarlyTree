@@ -34,8 +34,12 @@ def run():
 
         for module in modules:
             if 'module' in module.attributes and module.attributes['module'] == 'Part':
-                parts_csv.writerow([
-                    module.attributes['name'].strip(), module.attributes['TechRequired'].strip()])
+                try:
+                    parts_csv.writerow([
+                        module.attributes['name'].strip(), module.attributes['TechRequired'].strip()])
+                except KeyError:
+                    print(
+                        'Name or TechRequired on this module -\n {0}'.format(str(module)))
 
 
 class Ksp_Module:
@@ -52,6 +56,13 @@ class Ksp_Module:
         for k, v in regex_attributes:
             if not k in self.attributes:
                 self.attributes[k] = v
+
+    def __str__(self):
+        string = self.name + '{\n'
+        for k, v in self.attributes.items():
+            string += '    {0} = {1}\n'.format(k, v)
+        string += '}'
+        return string
 
 
 run()
