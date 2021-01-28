@@ -98,3 +98,9 @@ FanShroud_02,specializedFlightSystems,SquadExpansion,-
 FanShroud_03,specializedFlightSystems,SquadExpansion,-
 lGripPad,experimentalActuators,SquadExpansion,-
 lGripStrip,experimentalActuators,SquadExpansion,-
+restock-engine-les-2,survivability,ReStockPlus,-
+restock-goocanister-625-1,basicScience,ReStockPlus,-
+restock-wheel-1-T,engineering101,ReStockPlus,-
+nfex-antenna-rover-2,engineering101,NearFutureExploration,-
+nfex-bus-okto-1,basicScience,NearFutureExploration,-
+nfex-bus-okto-2,basicScience,NearFutureExploration,-
