@@ -106,3 +106,6 @@ cargoContainer,storageTech,Squad,-
 CargoStorageUnit,storageTech,Squad,-
 ModuleConnectedLivingSpace,simpleCommandModules,UniversalStorage2,-
 USDecouple,miniaturization,UniversalStorage2,-
+USKASRadial,spaceExploration,UniversalStorage2,-
+USKASWedge,spaceExploration,UniversalStorage2,-
+USCargoStorageWedge,unresercheable,UniversalStorage2,-
