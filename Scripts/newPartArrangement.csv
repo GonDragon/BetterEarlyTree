@@ -96,7 +96,7 @@ FanShroud_02,specializedFlightSystems,SquadExpansion,-
 FanShroud_03,specializedFlightSystems,SquadExpansion,-
 lGripPad,experimentalActuators,SquadExpansion,-
 lGripStrip,experimentalActuators,SquadExpansion,-
-restock-engine-les-2,survivability,ReStockPlus,-
+restock-engine-les-2,mannedVehicles ,ReStockPlus,-
 restock-goocanister-625-1,basicScience,ReStockPlus,-
 restock-wheel-1-T,engineering101,ReStockPlus,-
 nfex-antenna-rover-2,engineering101,NearFutureExploration,-
@@ -109,3 +109,6 @@ USDecouple,miniaturization,UniversalStorage2,-
 USKASRadial,spaceExploration,UniversalStorage2,-
 USKASWedge,spaceExploration,UniversalStorage2,-
 USCargoStorageWedge,unresercheable,UniversalStorage2,-
+pkLES_EscapeMk1v2,mannedVehicles ,Pebkac,-
+pkLES_mk2,simpleCommandModules,Pebkac,-
+pkLES_mk2_noBPC,simpleCommandModules,Pebkac,-
