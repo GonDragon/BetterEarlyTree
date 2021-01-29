@@ -104,3 +104,5 @@ nfex-bus-okto-1,basicScience,NearFutureExploration,-
 nfex-bus-okto-2,basicScience,NearFutureExploration,-
 cargoContainer,storageTech,Squad,-
 CargoStorageUnit,storageTech,Squad,-
+ModuleConnectedLivingSpace,simpleCommandModules,UniversalStorage2,-
+USDecouple,miniaturization,UniversalStorage2,-
