@@ -1,0 +1,28 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "adec3d6a81e187bb4f4c42ba2735c24d9132048fdff00097bd38287de1f4e25c"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.8"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "kspmodule": {
+            "hashes": [
+                "sha256:dd5b6c36a2b6441ae14921b55924fbed24ff994d61e2d84989132097376aa1f5"
+            ],
+            "path": "D:/Documents/Proyectos/KSPModule/dist/KSPModule-0.1.0-py3-none-any.whl",
+            "version": "==0.1.0"
+        }
+    },
+    "develop": {}
+}

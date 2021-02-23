@@ -2,67 +2,41 @@ import os
 import sys
 import re
 import csv
+from KSPModule import Reader
 
 
 def run():
     moddir = sys.argv[1] if len(sys.argv) > 1 else os.getcwd()
     modname = os.path.basename(moddir)
 
-    parts = {}
+    files = {}
 
     # r = root, d = directories, f = files
     for r, _, f in os.walk(moddir):
         for file in f:
             if file.endswith(".cfg"):
-                parts[file] = os.path.join(r, file)
+                files[file] = os.path.join(r, file)
 
-    regex_modules = re.compile(r'([A-Z]+\n\{.*\})', flags=re.DOTALL)
+    parts = [["name", "TechRequired"]]
 
-    modules = []
-    for _, v in parts.items():
-        with open(v, 'r', encoding='utf-8', errors='ignore') as cfgFile:
-            fileContent = ''.join(cfgFile.readlines())
-            raw_modules = regex_modules.findall(fileContent)
-            for raw_module in raw_modules:
-                modules.append(Ksp_Module(raw_module))
+    for _, v in files.items():
+        with open(v, 'r', encoding='utf-8-sig') as cfgFile:
+            try:
+                reader = Reader(cfgFile)
+            except:
+                print(v)
+                continue
+            for module in reader:
+                if module.type.upper() == 'PART' and module.has_attribute("TechRequired"):
+                    try:
+                        parts.append([module.get_attribute("name"), module.get_attribute(
+                            "TechRequired")])
+                    except:
+                        print("Unexpected error on module:\n{}".format(str(module)))
 
     with open('_output/{0}_parts.csv'.format(modname), "w", newline='') as documentoSalida:
-        parts_csv = csv.writer(
-            documentoSalida, delimiter=',', quotechar='"')
-
-        parts_csv.writerow(["name", "TechRequired"])
-
-        for module in modules:
-            if 'module' in module.attributes and module.attributes['module'] == 'Part':
-                try:
-                    parts_csv.writerow([
-                        module.attributes['name'].strip(), module.attributes['TechRequired'].strip()])
-                except KeyError:
-                    print(
-                        'Name or TechRequired on this module -\n {0}'.format(str(module)))
-
-
-class Ksp_Module:
-    _REGEX_MODULES = re.compile(r'([A-Z]+)\s+\{(.*)\}', flags=re.DOTALL)
-    _REGEX_ATTRIBUTES = re.compile(r'([A-Za-z]+)\s=\s(.*)')
-
-    def __init__(self, string):
-        modules = self._REGEX_MODULES.search(string)
-        self.name = modules.group(1)
-        self.attributes = {}
-        self.content = modules.group(2)
-
-        regex_attributes = self._REGEX_ATTRIBUTES.findall(modules.group(2))
-        for k, v in regex_attributes:
-            if not k in self.attributes:
-                self.attributes[k] = v
-
-    def __str__(self):
-        string = self.name + '{\n'
-        for k, v in self.attributes.items():
-            string += '    {0} = {1}\n'.format(k, v)
-        string += '}'
-        return string
+        csv.writer(documentoSalida, delimiter=',',
+                   quotechar='"').writerows(parts)
 
 
 run()
