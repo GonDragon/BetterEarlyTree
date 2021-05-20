@@ -114,3 +114,6 @@ pkLES_mk2,simpleCommandModules,Pebkac,-
 pkLES_mk2_noBPC,simpleCommandModules,Pebkac,-
 kOSMachine0m,unresercheable,kOs,-
 restock-decoupler-radial-tiny-1,stability,ReStockPlus,-
+Corvus_Exterior,simpleCommandModules,Corvus,-
+Corvus_Nose,simpleCommandModules,Corvus,-
+Corvus_Decoupler,basicRocketry,Corvus,-
